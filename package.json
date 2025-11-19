@@ -2,8 +2,9 @@
   "name": "toon-fmt",
   "displayName": "TOON",
   "description": "Syntax highlighting for TOON (Token-Oriented Object Notation)",
-  "version": "0.0.1",
-  "publisher": "my-publisher-id",
+  "version": "0.0.3",
+  "icon": "icon.png",
+  "publisher": "devstacks-software-engineering",
   "author": "DevStacks Software Engineering",
   "repository": {
     "type": "git",
