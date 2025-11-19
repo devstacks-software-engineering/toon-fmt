@@ -1,0 +1,41 @@
+{
+  "name": "toon-fmt",
+  "displayName": "TOON",
+  "description": "Syntax highlighting for TOON (Token-Oriented Object Notation)",
+  "version": "0.0.1",
+  "publisher": "my-publisher-id",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toon-format/toon-vscode"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "toon",
+        "aliases": [
+          "TOON",
+          "toon"
+        ],
+        "extensions": [
+          ".toon"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "toon",
+        "scopeName": "source.toon",
+        "path": "./syntaxes/toon.tmLanguage.json"
+      }
+    ]
+  }
+}
+
+

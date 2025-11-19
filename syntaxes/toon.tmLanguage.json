@@ -1,0 +1,87 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "TOON",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#headers"
+    },
+    {
+      "include": "#values"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.toon",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.line.number-sign.toon",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "headers": {
+      "patterns": [
+        {
+          "match": "^\\s*([a-zA-Z0-9_]+)(\\[(\\d+)\\])?(\\{([^}]+)\\})?:",
+          "captures": {
+            "1": {
+              "name": "entity.name.type.class.toon"
+            },
+            "2": {
+              "name": "meta.structure.array.toon"
+            },
+            "3": {
+              "name": "constant.numeric.integer.toon"
+            },
+            "4": {
+              "name": "meta.structure.dictionary.toon"
+            },
+            "5": {
+              "name": "variable.parameter.toon"
+            }
+          }
+        }
+      ]
+    },
+    "values": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.toon",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.toon",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "constant.numeric.toon",
+          "match": "\\b-?\\d+(\\.\\d+)?\\b"
+        },
+        {
+          "name": "constant.language.boolean.true.toon",
+          "match": "\\btrue\\b"
+        },
+        {
+          "name": "constant.language.boolean.false.toon",
+          "match": "\\bfalse\\b"
+        },
+        {
+          "name": "constant.language.null.toon",
+          "match": "\\bnull\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.toon"
+}
+
+
